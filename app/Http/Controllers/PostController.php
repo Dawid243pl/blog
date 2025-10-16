@@ -101,7 +101,7 @@ class PostController extends Controller
         }
         try {
             $post->delete();
-            return redirect()->back()->with('success', 'Post deleted successfully.');
+            return redirect()->route('post.index')->with('success', 'Post deleted successfully.');
         } catch (\Exception $e) {
             Log::error('Error deleting post: ' . $e->getMessage());
             return redirect()->back()->with('error', 'Failed to delete post.');

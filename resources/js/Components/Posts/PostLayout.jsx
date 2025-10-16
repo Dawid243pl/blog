@@ -58,9 +58,7 @@ export default function PostLayout({ auth, post, listView = true }) {
                                         "Are you sure you want to delete this post?"
                                     )
                                 ) {
-                                    router.delete(
-                                        route("post.destroy", post.id)
-                                    );
+                                    router.delete(route("post.destroy", post.id));
                                 }
                             }}
                             className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600"
