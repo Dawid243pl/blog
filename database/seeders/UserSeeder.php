@@ -20,11 +20,6 @@ class UserSeeder extends Seeder
                 'name' => 'Dawid Koleczko',
                 'email' => 'david.koleczko.cobc@gmail.com',
                 'password' => 'password'
-            ],
-            [
-                'name' => 'Petar',
-                'email' => 'recruitment@ominimo.eu',
-                'password' => 'password',
             ]
         ];
 
