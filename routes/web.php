@@ -7,7 +7,9 @@ use App\Http\Middleware\UserAuthenticated;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', [PostController::class, 'index'])->name('post.index');
+// Normally the home page would be here.
+Route::get('/', fn () => redirect()->route('post.index'));
+Route::get('/posts', [PostController::class, 'index'])->name('post.index');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
