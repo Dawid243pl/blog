@@ -2,9 +2,6 @@ import { Head, Link, router } from "@inertiajs/react";
 import PostLayout from "@/Components/Posts/PostLayout";
 
 export default function Index({ auth, posts }) {
-    console.log("posts", posts);
-    console.log("auth", auth);
-
     return (
         <>
             <Head title="Blog" />

@@ -10,7 +10,6 @@ import PostForm from "@/Components/Posts/Form";
 
 export default function CreatePost() {
     const { flash } = usePage().props;
-    console.log("flash", flash);
 
     const { data, setData, post, processing, errors } = useForm({
         title: "",

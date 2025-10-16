@@ -21,9 +21,9 @@ export default function Show({ auth, post }) {
         e.preventDefault();
 
         postData(
-            route("comment.store", postId), // only build the URL here
+            route("comment.store", postId),
             {
-                preserveScroll: true, // options go here
+                preserveScroll: true,
                 onSuccess: () => setData("comment", ""),
             }
         );

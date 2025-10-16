@@ -4,7 +4,7 @@ namespace Tests\Unit;
 
 use App\Models\Post;
 use App\Models\User;
-use Tests\TestCase; // <-- Use Laravel's TestCase
+use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ValidationTest extends TestCase

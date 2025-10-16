@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 export default function Flash({ flash }) {
     const [visible, setVisible] = useState({ success: false, error: false });
 
-    console.log("flash", visible);
-
     useEffect(() => {
         if (flash.success || flash.error) {
             setVisible({ success: !!flash.success, error: !!flash.error });

@@ -19,8 +19,6 @@ export default function PostLayout({ auth, post, listView = true }) {
 
     function submit(e, postId) {
         e.preventDefault();
-        console.log("postId", postId);
-        //alert("Comment feature is currently disabled.");
         postComment(route("comment.store", postId), {
             preserveScroll: true,
             onSuccess: () => {

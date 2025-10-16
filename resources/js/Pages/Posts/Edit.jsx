@@ -11,7 +11,6 @@ import PostForm from "@/Components/Posts/Form";
 
 export default function EditPost({ post }) {
     const { flash } = usePage().props;
-    console.log("flash", flash);
 
     const { data, setData, put, processing, errors } = useForm({
         title: post?.title ?? "",
