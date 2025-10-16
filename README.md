@@ -88,6 +88,11 @@ If you prefer a containerized setup, a Sail-based `compose.yaml` is included.
    ```bash
    ./vendor/bin/sail npm run dev
    ```
+   If Sail reports that a port is already in use, add overrides to your `.env` before running `sail up`, for example:
+   ```
+   APP_URL=http://localhost:8080
+   APP_PORT=8080      # map the app to http://localhost:8080
+   ```
 
 If Sail/Docker fails for any reason, fall back to the **Running the App Locally** section above—just keep the same MySQL credentials (adjusting `DB_HOST` as needed for your environment).
 
