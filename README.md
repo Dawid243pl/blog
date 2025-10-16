@@ -76,11 +76,15 @@ If you prefer a containerized setup, a Sail-based `compose.yaml` is included.
    ```bash
    ./vendor/bin/sail up -d
    ```
+5. Install Node dependencies inside the Sail container (this ensures platform-specific binaries like Rollup use the Linux builds):
+   ```bash
+   ./vendor/bin/sail npm install
+   ```
 5. Run migrations and seeders inside the Sail environment:
    ```bash
    ./vendor/bin/sail artisan migrate --seed
    ```
-6. Access the app at `http://localhost` (or the port defined by `APP_PORT`). Vite runs on `${VITE_PORT}` if you start it with:
+7. Access the app at `http://localhost` (or the port defined by `APP_PORT`). Vite runs on `${VITE_PORT}` if you start it with:
    ```bash
    ./vendor/bin/sail npm run dev
    ```
