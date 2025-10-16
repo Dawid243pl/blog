@@ -19,7 +19,13 @@ export default function CreatePost() {
 
     function submit(e) {
         e.preventDefault();
-        post(route("post.store"));
+        post(route("post.store"), {
+            onSuccess: () =>
+                setData({
+                    title: "",
+                    content: "",
+                }),
+        });
     }
     return (
         <AuthenticatedLayout
@@ -30,7 +36,6 @@ export default function CreatePost() {
             }
         >
             <Head title="Add Post" />
-
             <PostForm
                 submit={submit}
                 data={data}

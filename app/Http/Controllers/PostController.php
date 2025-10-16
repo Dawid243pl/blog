@@ -85,7 +85,7 @@ class PostController extends Controller
                 'content' => $data['content']
             ]);
             return redirect()->back()->with('success', 'Post updated successfully.');
-        } catch (\Illuminate\Validation\ValidationException $e) {
+        } catch (\Exception $e) {
             Log::error('Validation error while updating post: ' . $e->getMessage());
             return redirect()->back()->with('error', 'Failed to update post.');
         }
