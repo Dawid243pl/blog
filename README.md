@@ -35,7 +35,6 @@ Laravel 12 + Inertia React blog with authentication, role-based authorisation, p
    ```
    Seeded accounts:
    - Admin: `david.koleczko.cobc@gmail.com` / `password`
-   - Admin: `recruitment@ominimo.eu` / `password`
    - User: `testuser@gmail.com` / `password`
 5. Build frontend assets or start the dev servers:
    ```bash
